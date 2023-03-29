@@ -2,5 +2,5 @@
 
 def raise_exception():
     """Raise a TypeError exception."""
-    raise TypeErrorsr/bin/python3
+    raise TypeError
 
