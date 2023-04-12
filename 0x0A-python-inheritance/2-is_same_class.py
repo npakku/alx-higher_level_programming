@@ -3,7 +3,7 @@
 """python3 -c 'print(__import__("2-is_same_class").__doc__)"""
 
 def is_same_class(obj, a_class):
-    """print(__import__("2-is_same_class").is_same_class.__doc__)
+    """python3 -c print(__import__("2-is_same_class").is_same_class.__doc__)
     Check if an object is exactly an instance of a given class.
     Args:
         obj (any): The object to check.
