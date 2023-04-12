@@ -1,13 +1,20 @@
 #!/usr/bin/python3
+
+"""python3 -c 'print(__import__("7-base_geometry").__doc__)"""
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """Reprsent base geometry.
+       python3 -c 'print(__import__("my_module").MyClass.__doc__)	
+    """
 
     def area(self):
-        """Not yet implemented."""
+        """Not yet implemented.
+           python3 -c 'print(__import__("7-base_geometry").area.__doc__)
+	"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate a parameter as an integer.
+        """python3 -c 'print(__import__("7-base_geometry").integer_validator.__doc__)
+	Validate a parameter as an integer.
         Args:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
