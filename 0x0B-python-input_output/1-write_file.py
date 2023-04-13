@@ -5,10 +5,6 @@
 
 def write_file(filename="", text=""):
     """Return the number of characters in a text file."""
-    ch = 0
     with open(filename, "r+", encoding="utf-8") as f:
-        f.write(text)
-        filecont = f.read()
-        for character in filecont:
-            ch = ch + 1
-    return ch     
+        return f.write(text)
+             
