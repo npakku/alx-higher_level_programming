@@ -1,47 +1,69 @@
-#3-say_my_name
+# 3-say_my_name.txt
 
-==========================
-How to use 3_say_my_name
-==========================
-This module defines a function that says your say_my_name
+===========================
+How to Use 3-say_my_name.py
+===========================
 
-========
-usage
-=======
+This modules defines a function ``say_my_name(first_name, last_name="")``.
 
-```say_my_name``` prints My name is <first> <last>
+Usage
+=====
 
-::
-    >>> say_my_name("Pascal", "Zury")
-    My name is Pascal Zury
-
-The parameter ```last name``` is optional. if no string is passed
-an empty string is printed
-    >>> say_my_name("Pascal")
-    My name is Pascal
-
-Invalid names
-============
-If either first name or last name is not a string TypeError exception is 
-raised
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
 
 ::
-    >>> say_my_name(123, "Zury")
-    Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    File "C:\Users\USER\Documents\TUBE-DOWN\PY TDD\alx\3-say_my_name.py", line 16, in say_my_name
-        raise TypeError("First name must be a string")
-    TypeError: First name must be a string
 
-    >>> say_my_name("Pascal", 78)
-    Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    File "C:\Users\USER\Documents\TUBE-DOWN\PY TDD\alx\3-say_my_name.py", line 18, in say_my_name
-        raise TypeError("Last name must be a string")
-    TypeError: Last name must be a string
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Brennan", "Baraban")
+    My name is Brennan Baraban
 
-    At least one argument must be provided
+::
+
+    >>> say_my_name("Cornelius Maxwell", "Jones II")
+    My name is Cornelius Maxwell Jones II
+
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
+
+::
+
+    >>> say_my_name("Brennan")
+    My name is Brennan 
+
+Invalid Names
+=============
+
+The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
+a TypeError is raised.
+
+::
+
+    >>> say_my_name(6, "James")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+At least one name must be provided.
+
+::
+
     >>> say_my_name()
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
