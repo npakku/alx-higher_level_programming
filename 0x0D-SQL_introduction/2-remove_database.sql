@@ -1,2 +1,2 @@
---Drop database if it exists in mysql server
-DROP DATABASE `hbtn_0c_0` IF EXISTS;
+-- Creates the database hbtn_0c_0.
+CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
